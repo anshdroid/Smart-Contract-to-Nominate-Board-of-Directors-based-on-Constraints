@@ -1,0 +1,39 @@
+pragma solidity >=0.4.22 <0.6.0;
+
+contract Nominate{
+    uint constant minShare = 3;
+    uint shares;
+    uint constant minContribution = 10;
+    uint contribution;
+    bool public eligible;
+    string one =  "vice president";
+    string two = "president";
+    string desig;
+    uint constant minTimes = 2;
+    uint NumberAttended;
+   
+   
+     function setShare(uint a) public {
+       shares  = a;
+    }
+   
+     function setContriYears(uint b) public {
+       contribution  = b;
+    }
+   
+     function setDesignation(string c) public {
+         desig = c;
+     }
+     
+     function NumberOfWorkshop(uint d) public {
+         NumberAttended = d;
+     }
+   
+    function determineEligibility() public {
+       
+    if ((shares >= minShare && contribution >= minContribution && NumberAttended >= minTimes) && (keccak256(abi.encodePacked(desig)) == keccak256(abi.encodePacked(one)) || keccak256(abi.encodePacked(desig)) == keccak256(abi.encodePacked(two))))
+    eligible = true;
+    else eligible = false;
+  }
+ 
+}
