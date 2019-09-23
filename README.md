@@ -10,3 +10,4 @@ This is a smart contract for a organization for nomination of Board of Directors
 
 3. Candidate should have atleast 10 years of devotion to same organization.
 
+Link: https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.5.11+commit.c082d0b4.js
